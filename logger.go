@@ -230,6 +230,11 @@ func (l *Logger) Debug(format string, args ...interface{}) {
 	l.log(DEBUG, format, args...)
 }
 
+// Trace logs a message using TRACE as log level.
+func (l *Logger) Trace(format string, args ...interface{}) {
+	l.log(TRACE, format, args...)
+}
+
 func init() {
 	Reset()
 }
